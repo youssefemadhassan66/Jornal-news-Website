@@ -1,0 +1,98 @@
+body{
+    background-color: #f7f7f7;
+    font-family: mainFont;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+  }
+  @font-face {
+    font-family: logo;
+    src: url(../fonts/Jacquard24-Regular.ttf);
+  }
+
+  
+/*  */
+  .nav-container , .container{
+    height: inherit;
+    width: 95%;
+    margin: auto;
+  }
+
+.row{
+    height: inherit;
+    width: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+
+nav{
+    height: 110px;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+}
+/* Nav LOGO*/
+
+.nav-logo{
+font-family: logo;
+}
+
+/* Nav LIST*/
+
+.nav-list li {
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: black;
+    font-size: larger;
+    transition: all 0.1s ease-in-out;    
+}
+
+.nav-list li a {
+    transition: all 0.1s ease-in-out;
+}
+
+
+.nav-list li:last-child{    
+    border-right: 1px solid  #C40C0C;
+}
+
+.nav-list a:hover{
+    color: #C40C0C;
+
+}
+
+
+/* Nav Form*/
+
+.nav-list input{
+    border: none;
+    padding: 15px;
+    border-radius:30px;
+    width: 300px;
+    outline: none;
+}
+
+.nav-list button {
+    position: relative;
+    border: none;
+    border-radius: 30%; 
+    background-color: #fff;
+    right: 50px; 
+  
+}
+.nav-list button i{
+color: #b3b3b3;
+  
+}
