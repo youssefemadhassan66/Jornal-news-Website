@@ -16,15 +16,15 @@ body{
 
   
 /*  */
-  .nav-container , .container{
+  .nav-container , .container ,.header-container{
     height: inherit;
-    width: 95%;
+    width: 90% ;
     margin: auto;
   }
 
 .row{
     height: inherit;
-    width: inherit;
+    width: 100%;
 }
 
 a{
@@ -34,9 +34,13 @@ a{
 ul{
     list-style: none;
 }
+.cap-l{
+    color: rgba(87, 87, 87, 0.637);
+}
 
+/*Nav bar*/ 
 nav{
-    height: 110px;
+    height: 120px;
     width: 100%;
     background-color: rgb(235, 235, 235);
 }
@@ -65,11 +69,11 @@ font-family: logo;
 
 
 .nav-list li:last-child{    
-    border-right: 1px solid  #C40C0C;
+    border-right: 1px solid  #000;
 }
 
 .nav-list a:hover{
-    color: #C40C0C;
+    color: #A34343;
 
 }
 
@@ -95,4 +99,86 @@ font-family: logo;
 .nav-list button i{
 color: #b3b3b3;
   
+}
+
+
+/* Header*/
+
+.Header{
+    width: 90%;
+    height: 85vh;
+    background-color: rgb(235, 235, 235);
+    margin: auto;
+}
+
+/* Header photo*/
+.header-photo img{
+    max-width: 90%;
+    border-radius: 5px;
+}
+
+/* Header Content*/
+.header-title{
+    font-family: logo;
+    color: #A34343;
+}
+
+
+.header-content button{
+    border: 0px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #A34343;
+    color: #f7f7f7;
+    width: 150px;
+}
+
+.header-content a{
+    color: #f7f7f7;
+    transition: all 0.1s ease-in-out;
+}
+.header-content a:hover{
+    color: black;
+}
+
+
+/* Latest */
+
+.Latest{
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    
+}
+.card-img img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card-icon img {
+    max-width: 12%;
+    border-radius: 50%;   
+    margin-bottom: 6PX; 
+}
+.card-icon p{ 
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+
+
+/*Editors*/
+.Editors{
+    width: 900%;
+    height: 400px;
+    margin: auto;
+}
+
+
+
+/* Articles */ 
+.Articles{
+    width: 90%;
+    height: 400px;
+    margin: auto;
 }
