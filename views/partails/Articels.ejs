@@ -1,0 +1,41 @@
+<section class="Articles my-5 py-5">
+    <div class="Articles-container">
+     <h1 class="header-title ">Articles</h1>
+    <%let counter = 0 %>
+    <% posts.forEach(function(post){ %>
+        <div class="articlePost my-5 row d-flex justify-content-center">
+            <% if(counter %2 == 0){ %>
+            <div class="postContent d-flex flex-column justify-content-center col-4">
+           
+                <h1 class="header-title"><%=post.title %></h1>
+                <p class="post-p"><%=post.content.substr(0,190) + "....." %></p>
+                <button class="articleButton"><a href="/posts/<%=post.title%>">See More</a></button>
+
+                <div class="made-by d-flex my-4">
+                    <img src="" alt="">
+                    <p class="">Published  by : &nbsp; <%=post.publisher%></p>
+                </div>
+            </div>
+            <div class="postImg col-5">
+                <img src="/uploads/<%=post.image%>" alt="">
+            </div>
+         <% counter++ %>
+         <% } else { %>
+            <div class="postImg col-5">
+                <img src="/uploads/<%=post.image%>" alt="">
+            </div>
+            <div class="postContent d-flex flex-column justify-content-center col-4">
+                <h1 class="header-title"><%=post.title %></h1>
+                <p class="post-p"><%=post.content.substr(0,190) + "....." %></p>
+                <button class="articleButton"><a href="/posts/<%=post.title%>">See More</a></button>
+                <div class="made-by d-flex my-4">
+                    <img src="" alt="">
+                    <p class="">Published  by :&nbsp;<%=post.publisher%></p>
+                </div>
+            </div>
+         <% counter++ %>
+         <% } %>
+        </div>
+        <% }); %>
+    </div>
+</section>

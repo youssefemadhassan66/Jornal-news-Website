@@ -10,8 +10,20 @@ body{
     src: url(../fonts/Rajdhani-Medium.ttf);
   }
   @font-face {
-    font-family: logo;
+    font-family: main-header;
     src: url(../fonts/Jacquard24-Regular.ttf);
+  }
+  @font-face {
+    font-family: logo;
+    src: url("../fonts/Butler_Black.otf");
+  }
+  @font-face {
+    font-family: article-head;
+    src: url("../fonts/DMSerifDisplay-Regular.ttf");
+  }
+  @font-face {
+    font-family: article-prag;
+    src: url("../fonts/DMSerifDisplay-Italic.ttf");
   }
 
   
@@ -47,7 +59,7 @@ nav{
 /* Nav LOGO*/
 
 .nav-logo{
-font-family: logo;
+font-family: main-header;
 }
 
 /* Nav LIST*/
@@ -109,6 +121,7 @@ color: #b3b3b3;
     height: 85vh;
     background-color: rgb(235, 235, 235);
     margin: auto;
+    padding: 200px;
 }
 
 /* Header photo*/
@@ -120,7 +133,7 @@ color: #b3b3b3;
 /* Header Content*/
 .header-title{
     font-family: logo;
-    color: #A34343;
+    color: black;
 }
 
 
@@ -128,7 +141,7 @@ color: #b3b3b3;
     border: 0px;
     height: 50px;
     border-radius: 5px;
-    background-color: #A34343;
+    background-color: #000;
     color: #f7f7f7;
     width: 150px;
 }
@@ -150,10 +163,14 @@ color: #b3b3b3;
     margin: auto;
     
 }
+.card-content h2{
+    font-size:28px;
+}
 .card-img img{
     max-width: 100%;
     border-radius: 10px;
 }
+
 
 .card-icon img {
     max-width: 12%;
@@ -169,16 +186,96 @@ color: #b3b3b3;
 
 /*Editors*/
 .Editors{
-    width: 900%;
-    height: 400px;
+    width: 90%;
+    height: 600px;
     margin: auto;
+    background-image: url("../images/edit7 (2).jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    color: white;
+
+}
+      
+.gradint
+{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #0f2130b9,#010D16 );
+    border-radius: 15px;
+
 }
 
+.space{
+    height: 40%;
+    width: 100%;
+}
+
+.Editors-icon img {
+    max-width: 2.5%;
+    border-radius: 50%;   
+    margin-bottom: 20PX; 
+}
+
+.Editors p {
+    opacity: 0.7;
+}
 
 
 /* Articles */ 
 .Articles{
+    width: 100%;   
+
+
+}
+.Articles-container{
     width: 90%;
-    height: 400px;
     margin: auto;
 }
+.articlePost {
+    height: 450px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+
+    
+}
+.postImg{
+    
+    height: 100%;
+}
+.postImg img { 
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+.postContent h1{
+    font-family: article-head;
+}
+.postContent p{
+    font-family: article-prag;
+    opacity: 0.9;
+    
+}
+.articleButton{
+    border: 0px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #000;
+    width: 150px;
+    transition: all 0.3s ease-in-out;
+
+}
+.articleButton:hover {
+    color: #000;
+    background-color: transparent;
+    border: 2px solid #000
+    
+}
+.articleButton:hover > a {color:black}
+
+.articleButton a {
+    color: #f7f7f7;
+}
+   

@@ -1,0 +1,18 @@
+<%-include('partails/header')%>
+
+
+<form action="/compose" method="post" class="d-flex flex-column" enctype="multipart/form-data">
+
+    <label for=""> Header-title</label>
+    <input type="text" name="postTitle">
+    <label for="">Header-body</label>
+    <textarea name="postBody" id="" cols="30" rows="10" ></textarea>
+    <label for=""> Image</label>
+    <input type="file" name="image">
+    <label for="">Publisher Name</label>
+    <input type="text" name="Publisher">
+    <button type="submit" class="btn btn-primary">Publish</button>
+
+</form>
+
+<%-include('partails/footer')%>
