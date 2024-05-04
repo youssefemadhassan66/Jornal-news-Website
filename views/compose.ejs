@@ -1,18 +1,37 @@
-<%-include('partails/header')%>
+<%-include("partails/header-compose")%>
 
 
-<form action="/compose" method="post" class="d-flex flex-column" enctype="multipart/form-data">
+        <div class="header">
+          <div class="row">  
+            <div class="headerContent col-6">
+                <div class="space"></div>
+                <div class="headerContent-container">
+                    <h1>Our voice <br>have no litmit</h1>
+                    <p class="mt-5">Everyone is in favor of free speech. Hardly a day passes without its being extolled, but some people's idea of it is that they are free to say what they like, but if anyone says anything back, that is an outrage</p>            
+                </div>    
+            </div>
+            <div class="headerForm col-6 px-5">
+                <form action="/compose" method="post" class="d-flex flex-column gap-4  " enctype="multipart/form-data">
+                    <h1 class="mt-5">Compose</h1>
+                    <label for="">Header Title</label>
+                    <input type="text" autocomplete="off"  name="postTitle">
+                    <label for="">Publisher Name</label>
+                    <input autocomplete="off" type="text" name="Publisher">
+                    <label for="">Header-body</label>
+                    <textarea autocomplete="off"  name="postBody" id="" cols="20" rows="6" ></textarea>
+                    <label class="mt-3">Add Image</label>
+                    <div class="file-input">
+                        <input type="file" id="file" name="image" class="file">
+                        <label for="file">Select Image</label>
+                      </div>
+                      <div class="user-publish d-flex align-items-center justify-content-between ">
+                        <label for="">Publish Your article</label>
+                        <button type="submit" class="Publish">Publish</button>
 
-    <label for=""> Header-title</label>
-    <input type="text" name="postTitle">
-    <label for="">Header-body</label>
-    <textarea name="postBody" id="" cols="30" rows="10" ></textarea>
-    <label for=""> Image</label>
-    <input type="file" name="image">
-    <label for="">Publisher Name</label>
-    <input type="text" name="Publisher">
-    <button type="submit" class="btn btn-primary">Publish</button>
-
-</form>
-
-<%-include('partails/footer')%>
+                      </div>
+                    
+                </form>
+            </div>    
+          </div>   
+        </div>
+        <%-include("partails/footer-compose")%>

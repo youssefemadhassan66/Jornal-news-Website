@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const multer  = require('multer');
+const ejs  = require("ejs");
+const multer = require('multer');
 const path = require('path');
+const fs   = require('fs');
 const Port = 3000;
 const _ = require("lodash");
-
 
 
 const app = express();
@@ -44,7 +44,7 @@ app.get("/posts/:Title",function(req,res){
   let  requestParameter = req.params.Title;
   posts.forEach(function(post){
     if(_.lowerCase(post.title) === _.lowerCase(requestParameter)){
-      res.render("posts",{posts:posts});
+      res.render("posts",{postTitle:post.title,postBody:post.content,postPublisher:post.publisher,postImage:post.image});
     }
   });
  });
@@ -52,8 +52,7 @@ app.get("/posts/:Title",function(req,res){
 
 //Posts 
 app.get("/posts", function(req,res){
-  res.render("posts",{posts:posts});
-
+  
 });
 
 // Post requests
@@ -67,10 +66,42 @@ app.post("/compose", upload.single("image"), function(req, res) {
 
   if (req.file) {
     post.image = req.file.filename;
-}
+  }
   posts.push(post);
   res.redirect("/");
 
+});
+
+
+
+
+
+
+const uploadsFolder = path.join(__dirname, 'public', 'uploads');
+
+// Delete files from the uploads folder
+fs.readdir(uploadsFolder, (err, files) => {
+    if (err) {
+        console.error('Error reading uploads folder:', err);
+        return;
+    }
+
+    if (files.length === 0) {
+        console.log('No files found in uploads folder.');
+        return;
+    }
+    // Iterate through files and remove each one
+    files.forEach(file => {
+        const filePath = path.join(uploadsFolder, file);
+        fs.unlink(filePath, err => {
+            if (err) {
+                console.error(`Error deleting file ${filePath}:`, err);
+            } else {
+                console.log(`File ${filePath} deleted successfully.`);
+            }
+        });
+    });
+    console.log('Files deleted from the uploads folder.');
 });
 
 

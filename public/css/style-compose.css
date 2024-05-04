@@ -1,0 +1,183 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+  }
+  @font-face {
+    font-family: nav-logo;
+    src: url(../fonts/Jacquard24-Regular.ttf);
+  }
+  @font-face {
+    font-family: headers;
+    src: url("../fonts/Butler_Black.otf");
+  }
+  @font-face {
+    font-family: lables;
+    src: url(../fonts/Abel-Regular.ttf);
+  }
+  
+.headerBackground{
+    background-image: url(/images/compose-background2.jpg);
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.gradint{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #193449b9,#010D16 );
+}
+
+.nav-container , .container ,.header-container{
+    height: inherit;
+    width: 100% ;
+    margin: auto;   
+  }
+
+.row{
+    height: inherit;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+.cap-l{
+    color: rgba(87, 87, 87, 0.637);
+}
+
+/*Nav bar*/ 
+nav{
+    height: 120px;
+    width: 100%;
+    background-color: transparent;
+}
+/* Nav LOGO*/
+
+.nav-logo h1 a{
+font-family: nav-logo;
+color: #FFF;
+}
+
+/* Nav LIST*/
+
+.nav-list{
+
+    backdrop-filter: blur(5px);
+    background-color: #111f2bb9;
+}
+
+
+/* header content*/
+.space{
+    height: 30%;
+}
+.headerContent{
+    color: #FFF;
+    font-family: headers;
+}
+.headerContent-container{
+    width: 90%;
+    margin: auto;
+}
+.headerContent-container h1{
+    font-size: 60px;
+}
+
+.headerContent-container p{
+    font-family: mainFont;
+}
+
+
+/* Header Form */ 
+
+.header{
+    height: 85vh;
+    backdrop-filter: blur(2px);
+    
+}
+
+.headerForm{
+    background-color: transparent;
+    color: #fff;
+    background-image: linear-gradient( #111f2bb9,#050f16b9 );    
+
+}
+.headerForm form h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 7000;
+}
+.headerForm form { 
+    width: 70%;
+    margin: auto;
+}
+
+.headerForm form input ,textarea  { 
+    background-color: transparent;
+    border: none;
+    border-bottom: #b3b3b3 solid 1px;
+    color: #b3b3b3;
+    border-radius: 5px;
+}
+textarea:focus, input:focus ,label:focus{
+    outline: none;
+}
+
+.headerForm h1 {
+    font-family: lables;
+}
+
+.headerForm label {
+    font-family: lables;
+    font-size: 18px;
+}
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+  }
+  
+  .file-input label {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(44, 73, 158);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: lables;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+  }
+
+  .user-publish{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+   
+  }
+.Publish{
+    width: 250px;
+    height: 50px;
+    border-radius: 1px;
+    background-color: #193f5eb9;
+    border: none;
+    color: #Fff;
+    float: right;
+    transition:  .2s ease-in-out;
+}
+.Publish:hover{
+    background-color: transparent;
+    border: 1px solid #193f5eb9;
+    color: #ffffffc2;
+
+}

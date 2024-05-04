@@ -1,13 +1,14 @@
 
 <%-include('partails/header')%>
 
-<% posts.forEach(function(post){ %>
+
 <div class="articlePost d-flex flex-column">
-    <img src="/uploads/<%=post.image%>" alt="">
-    <h1><%=post.title %></h1>
-    <p><%=post.content %></p>
+    <img src="/uploads/<%=postImage%>" alt="">
+    <h1><%=postTitle %></h1>
+    <p><%=postBody%></p>
+    <p><%=postPublisher%></p>
 </div>
-<%});%>
+
 
 
 <%-include('partails/footer')%>
